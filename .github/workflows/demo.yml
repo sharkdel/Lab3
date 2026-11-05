@@ -2,7 +2,7 @@ name: Demo WorkFlow # имя actions
 on: workflow_dispatch
 
 jobs:
-  print:
+  build:
     runs-on: ubuntu-22.04
     steps:
       - name: Print to console
@@ -13,8 +13,8 @@ jobs:
           echo line2
           echo line3
 publish:
-  print:
     runs-on: ubuntu-22.04
+    needs: build
     steps:
       - name: Print to console
         run: echo Helo GH Actions
