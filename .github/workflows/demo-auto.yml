@@ -1,0 +1,24 @@
+name: Demo WorkFlow # имя actions
+on:
+  push:
+    branches: 
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Print to console
+        run: echo Helo GH Actions
+      - name: Print few lines
+        run: |
+          echo line1
+          echo line2
+          echo line3
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Print to console
+        run: echo Helo GH Actions
+      - name: Print few lines
+        run: ls -la
