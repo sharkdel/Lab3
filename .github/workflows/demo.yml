@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Print to console
-      - run: echo Helo git actions
+        run: echo Helo git actions
       - name: Print few lines
-      - run: |
+        run: |
           echo line1
           echo line2
           echo line3
