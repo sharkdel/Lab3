@@ -1,0 +1,15 @@
+name: Demo WorkFlow # имя actions
+on: workflow_dispatch
+
+jobs:
+  print:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Print to console
+      - run: echo Helo git actions
+      - name: Print few lines
+      - run: |
+          echo line1
+          echo line2
+          echo line3
+  
