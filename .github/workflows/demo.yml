@@ -12,7 +12,7 @@ jobs:
           echo line1
           echo line2
           echo line3
-publish:
+  publish:
     runs-on: ubuntu-22.04
     needs: build
     steps:
